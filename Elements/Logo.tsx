@@ -1,9 +1,5 @@
-import React from 'react'
-
-const Logo = () => {
+export const logo = (text: any) => {
   return (
-    <div>Logo</div>
+    <h1>{text}</h1>
   )
 }
-
-export default Logo

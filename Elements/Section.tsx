@@ -4,7 +4,7 @@ import React from 'react'
 const Section = (props:{
   className: string,
   container: '' | 'fluid',
-  children: any
+  children: JSX.Element|JSX.Element[]
 }) => {
   return (
     <section className={`ex-section ex-${props.className}`}>

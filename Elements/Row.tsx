@@ -1,16 +1,13 @@
 import { type } from 'os';
-import React from 'react'
+import React from 'react';
 
-type container = '' | 'fluid';
-
-const Row = (props:{
-  className: string,
-  container: container,
-  children: any
+const Row = ({className, children}:{
+  className?: string,
+  children: JSX.Element | JSX.Element[]
 }) => {
   return (
-    <div className={'ex-row row'}>
-          {props.children}
+    <div className={`ex-row row ${className}`}>
+          {children}
     </div>
   )
 }

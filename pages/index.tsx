@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Branding from '../components/Branding'
 import Section from '../Elements/Section'
 import SecChild from '../Elements/Section'
-import Default from '../Layouts/Default.layout'
+import Default from '../layouts/Default.layout'
 
 
 const Home: NextPage = () => {

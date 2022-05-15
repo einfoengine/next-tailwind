@@ -1,5 +1,9 @@
 import React from 'react'
 import Section from '../Elements/Section'
+import Row from '../Elements/Row'
+import Col from '../Elements/Column'
+import {logo} from '../Elements/Logo'
+import Module from '../Elements/Module'
 
 
 const Default = (props:{
@@ -12,9 +16,26 @@ const Default = (props:{
   return (
     <>
       <Section className='top' container='fluid'>
-        <h1>Hello tailwind</h1>
+        <Row>
+          <Col position='a' greed={12}>
+            <Module 
+              moduleName='testModule' 
+              moduleTitle={{
+                title: "Logo", 
+                visibility: 'hide', 
+                titleClass: "title-class"
+              }} 
+              moduleBodyFunction={logo("Hi I am logo")}
+            />
+          </Col>
+        </Row>
       </Section>
       {/* End section Hero*/}
+      <Section className='ex-section-news' container='fluid'>
+        <Row>
+          
+        </Row>
+      </Section>
       <section className='ex-section ex-section-news'>
         <div className="conteiner">
           <div className="row">
