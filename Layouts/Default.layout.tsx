@@ -2,75 +2,34 @@ import React from 'react'
 import Section from '../Elements/Section'
 import Row from '../Elements/Row'
 import Col from '../Elements/Column'
-import {logo} from '../Elements/Logo'
-import Module from '../Elements/Module'
+
+import type { layoutPayload } from '../types/global.type'
 
 
-const Default = (props:{
-  slider?: [{
-    imgSrc: string,
-    text: string,
-    link?: string
-  }]
-}) => {
+const Default = ({layoutPayload}:{layoutPayload: layoutPayload}) => {
   return (
     <>
-      <Section className='top' container='fluid'>
-        <Row>
-          <Col position='a' greed={12}>
-            <Module 
-              moduleName='testModule' 
-              moduleTitle={{
-                title: "Logo", 
-                visibility: 'hide', 
-                titleClass: "title-class"
-              }} 
-              moduleBodyFunction={logo("Hi I am logo")}
-            />
-          </Col>
-        </Row>
-      </Section>
-      {/* End section Hero*/}
-      <Section className='ex-section-news' container='fluid'>
-        <Row>
-          
-        </Row>
-      </Section>
-      <section className='ex-section ex-section-news'>
-        <div className="conteiner">
-          <div className="row">
-            <div className="col-md-12 ex-news-1">
-              Tickr
+      {
+        layoutPayload.map((section:any, index: number)=>
+          <section key={section.id} id={section.id != undefined ? 'ex-section-'+section.id : 'ex-section-'+section.name} className={'ex-section '+section.classes}>
+            <div className={section.type='fixed'?'container':'container-fluid'}>
+              {
+                section.rows.map((row:any, index:number)=>
+                  <div key={`ex-${section.name}-${index}`} id={`ex-${section.name}-${index}`} className={`grid grid-cols-${row.gridCols} gap-4`}>
+                    {
+                      row.cols.map((col:any, index:number)=>
+                        <div key={`${section.name}-${row.id}-'col-'${index}`} className={`bg-red-400 rounded w-full p-5 ${col.span&&`col-span-${col.span}`}`}>
+                          {col.components}
+                        </div>
+                      )
+                    }
+                  </div>
+                )
+              }
             </div>
-          </div>
-        </div>
-      </section>
-      {/* End section news*/}
-      <section className='ex-section ex-section-hostory'>
-        <div className="conteiner">
-          <div className="row">
-            <div className="col-md-12 ex-hostory-1">
-              Tickr
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* End section hostory*/}
-      <section className='ex-section ex-section-notice'>
-        <div className="conteiner">
-          <div className="row">
-            <div className="col-md-12 ex-notice-1">
-              Notice 1
-            </div>
-            {/* End col ex-notice-1 */}
-            <div className="col-md-12 ex-notice-2">
-              Notice 2
-            </div>
-            {/* End col ex-notice-2 */}
-          </div>
-        </div>
-      </section>
-      {/* End section Notice*/}
+          </section>
+        )
+      }
     </>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Section = (props:{
   className: string,
-  container: '' | 'fluid',
+  container: 'fixed' | 'fluid',
   children: JSX.Element|JSX.Element[]
 }) => {
   return (
