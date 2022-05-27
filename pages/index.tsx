@@ -3,8 +3,11 @@ import Head from 'next/head'
 import Default from '../layouts/Default.layout'
 import ImageBox from '../Elements/ImageBox'
 import BrandDetails from '../components/BrandDetails'
+import Login from '../components/Login'
+import MainNav from '../components/MainNav'
 
 import type { layoutPayload } from '../types/global.type'
+import Slider from '../Elements/Slider'
 
 const layoutPayload:layoutPayload = [
   {
@@ -14,11 +17,12 @@ const layoutPayload:layoutPayload = [
     type: 'fixed',
     rows: [
       {
-        gridCols: 3,
+        gridCols: 12,
         gridGap: 8,
         cols:[
           {
             classes: '',
+            span: 2,
             components: 
             <>
             logo
@@ -26,24 +30,26 @@ const layoutPayload:layoutPayload = [
           },
           {
             classes: '',
+            span: 8,
             components: 
             <>
-            brand
+              <BrandDetails brandName='The scholers school' brandAddress='The district, The zone, The street, The House 17/5' brandContact='+88 0171402822' brandEmail='user@domain.com' />
             </>
           },
           {
             classes: '',
+            span: 2,
             components: 
             <>
-            user
+              <Login />
             </>
           },
           {
             classes: '',
-            span: 3,
+            span: 12,
             components: 
             <>
-            main nav
+             <MainNav/>
             </>
           }
         ]
@@ -65,6 +71,7 @@ const layoutPayload:layoutPayload = [
             components: 
             <>
             hero
+            <Slider/>
             </>
           },
         ]

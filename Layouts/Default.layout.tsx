@@ -18,7 +18,7 @@ const Default = ({layoutPayload}:{layoutPayload: layoutPayload}) => {
                   <div key={`ex-${section.name}-${index}`} id={`ex-${section.name}-${index}`} className={`grid grid-cols-${row.gridCols} gap-4`}>
                     {
                       row.cols.map((col:any, index:number)=>
-                        <div key={`${section.name}-${row.id}-'col-'${index}`} className={`bg-red-400 rounded w-full p-5 ${col.span&&`col-span-${col.span}`}`}>
+                        <div key={`${section.name}-${row.id}-'col-'${index}`} className={`w-full ${col.span&&`col-span-${col.span}`}`}>
                           {col.components}
                         </div>
                       )
