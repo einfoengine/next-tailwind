@@ -11,23 +11,27 @@ const Default = ({layoutPayload}:{layoutPayload: layoutPayload}) => {
     <>
       {
         layoutPayload.map((section:any, index: number)=>
-          <section key={section.id} id={section.id != undefined ? 'ex-section-'+section.id : 'ex-section-'+section.name} className={'ex-section '+section.classes}>
-            <div className={section.type='fixed'?'container':'container-fluid'}>
-              {
-                section.rows.map((row:any, index:number)=>
-                  <div key={`ex-${section.name}-${index}`} id={`ex-${section.name}-${index}`} className={`grid grid-cols-${row.gridCols} gap-4`}>
-                    {
-                      row.cols.map((col:any, index:number)=>
-                        <div key={`${section.name}-${row.id}-'col-'${index}`} className={`w-full ${col.span&&`col-span-${col.span}`}`}>
-                          {col.components}
-                        </div>
-                      )
-                    }
-                  </div>
-                )
-              }
-            </div>
-          </section>
+          <Section 
+            key={section.id} 
+            id={section.id != undefined ? 'ex-section-'+section.id : 'ex-section-'+section.name} 
+            className={'ex-section '+section.classes}
+            container='fixed'
+          >
+            {section.rows.map((row:any, index:number)=>
+              <Row key={`ex-${section.name}-${index}`} id={`ex-${section.name}-${index}`} className={`grid grid-cols-${row.gridCols} gap-4`}>
+                {
+                  row.cols.map((col:any, index:number)=>
+                    <Col 
+                      key={`${section.name}-${row.id}-'col-'${index}`} 
+                      className={`ex-col ex-${section.id+'-'+row.id+'-col-'+index} ${col.span&&`col-span-${col.span}`}`}
+                    >
+                      {col.components}
+                    </Col>
+                  )
+                }
+              </Row>
+            )}
+          </Section>
         )
       }
     </>

@@ -25,15 +25,23 @@ const layoutPayload:layoutPayload = [
             span: 2,
             components: 
             <>
-            logo
+              Logo
             </>
           },
+          // {
+          //   classes: '',
+          //   span: 8,
+          //   components: 
+          //   <>
+          //     {/* <BrandDetails brandName='The scholers school' brandAddress='The district, The zone, The street, The House 17/5' brandContact='+88 0171402822' brandEmail='user@domain.com' /> */}
+          //   </>
+          // },
           {
             classes: '',
             span: 8,
             components: 
             <>
-              <BrandDetails brandName='The scholers school' brandAddress='The district, The zone, The street, The House 17/5' brandContact='+88 0171402822' brandEmail='user@domain.com' />
+             <MainNav/>
             </>
           },
           {
@@ -42,14 +50,6 @@ const layoutPayload:layoutPayload = [
             components: 
             <>
               <Login />
-            </>
-          },
-          {
-            classes: '',
-            span: 12,
-            components: 
-            <>
-             <MainNav/>
             </>
           }
         ]

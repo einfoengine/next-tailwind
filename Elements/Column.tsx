@@ -2,13 +2,13 @@ import React from 'react'
 
 const Column = (props:{
   className?: string,
-  position: 'a' | 'b' | 'c' | 'd',
+  // position: 'a' | 'b' | 'c' | 'd',
   children: JSX.Element | JSX.Element[],
   // children: any,
-  greed: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+  // grid: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 }) => {
   return (
-    <div className={`ex-column col col-md-${props.greed} ex-position-${props.position} ${props.className}`}>
+    <div className={`ex-column col col-md-${props.grid} ex-position-${props.position} ${props.className}`}>
         {props.children}
     </div>
   )
