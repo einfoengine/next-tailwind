@@ -7,7 +7,6 @@ import Login from '../modules/Login'
 import MainNav from '../modules/MainNav'
 
 import type { layoutPayload } from '../types/global.type'
-import Slider from '../Elements/Slider'
 import React from 'react'
 import Logo from '../modules/Logo'
 

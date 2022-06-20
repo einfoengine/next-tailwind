@@ -7,7 +7,7 @@ import Login from '../components/Login'
 import MainNav from '../components/MainNav'
 
 import type { layoutPayload } from '../types/global.type'
-import Slider from '../Elements/Slider'
+import Banner from '../Elements/Banner'
 
 const layoutPayload:layoutPayload = [
   {
@@ -23,34 +23,17 @@ const layoutPayload:layoutPayload = [
           {
             classes: '',
             span: 2,
-            components: 
-            <>
-              Logo
-            </>
+            components: <>Logo</>
           },
-          // {
-          //   classes: '',
-          //   span: 8,
-          //   components: 
-          //   <>
-          //     {/* <BrandDetails brandName='The scholers school' brandAddress='The district, The zone, The street, The House 17/5' brandContact='+88 0171402822' brandEmail='user@domain.com' /> */}
-          //   </>
-          // },
           {
             classes: '',
             span: 8,
-            components: 
-            <>
-             <MainNav/>
-            </>
+            components: <MainNav/>
           },
           {
             classes: '',
             span: 2,
-            components: 
-            <>
-              <Login />
-            </>
+            components: <Login />
           }
         ]
       },
@@ -60,7 +43,7 @@ const layoutPayload:layoutPayload = [
     id:'hero',
     name: "hero",
     classes: "mt-4",
-    type: 'fixed',
+    type: 'fluid',
     rows: [
       {
         gridCols: 1,
@@ -68,10 +51,18 @@ const layoutPayload:layoutPayload = [
         cols:[
           {
             classes: '',
-            components: 
-            <>
-            hero
-            <Slider/>
+            components: <>
+              <Banner 
+              className='ex-hero' 
+              title='We help to find your better half' 
+              subTitle='Demo sub title'
+              text='Demo text'
+              link='#'
+              backgroundColor='#000'
+              backgroundImage='hero-1.jpg'
+              backgroundOverlay=''
+            />
+            
             </>
           },
         ]

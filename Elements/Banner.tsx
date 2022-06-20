@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Banner = ({
     className,
@@ -19,12 +20,13 @@ const Banner = ({
     backgroundColor: string,
     backgroundOverlay: string
 }) => {
+  let background = require(`../public/images/${backgroundImage}`)
   return (
-    <div className={`ex-element ex-banner ${className}`} style={{backgroundColor: backgroundColor, backgroundImage: backgroundImage}}>        
+    <div className={`ex-element ex-banner ${className}`} style={{backgroundColor: backgroundColor,  backgroundImage: `url(${background.default.src})`}}>        
         <h3>{title}</h3>
         <h4>{subTitle}</h4>
         <p>{text}</p>
-        <a href={link}>Details</a>
+        <a className='btn btn-primary' href={link}>Details</a>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import '../styles/tailwind.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../styles/globals.css'
 import '../styles/style.scss'
 
