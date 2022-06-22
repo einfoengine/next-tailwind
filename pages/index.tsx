@@ -8,12 +8,15 @@ import MainNav from '../components/MainNav'
 
 import type { layoutPayload } from '../types/global.type'
 import Banner from '../Elements/Banner'
+import AdvanceSearch from '../components/AdvanceSearch'
+import Features from '../components/Features'
+import CallToAction from '../components/CallToAction'
 
 const layoutPayload:layoutPayload = [
   {
     id:'top',
     name: "top",
-    classes: "test",
+    classes: "no-padding",
     type: 'fixed',
     rows: [
       {
@@ -23,7 +26,7 @@ const layoutPayload:layoutPayload = [
           {
             classes: '',
             span: 2,
-            components: <>Logo</>
+            components: <h1>Pakhi Bhai</h1>
           },
           {
             classes: '',
@@ -51,8 +54,7 @@ const layoutPayload:layoutPayload = [
         cols:[
           {
             classes: '',
-            components: <>
-              <Banner 
+            components: <Banner 
               className='ex-hero' 
               title='We help to find your better half' 
               subTitle='Demo sub title'
@@ -62,17 +64,15 @@ const layoutPayload:layoutPayload = [
               backgroundImage='hero-1.jpg'
               backgroundOverlay=''
             />
-            
-            </>
           },
         ]
       },
     ],
   },
   {
-    id:'notice',
-    name: "notice",
-    classes: "mt-4",
+    id:'advance-search',
+    name: "advance-search",
+    classes: "",
     type: 'fixed',
     rows: [
       {
@@ -81,19 +81,16 @@ const layoutPayload:layoutPayload = [
         cols:[
           {
             classes: '',
-            components: 
-            <>
-            notice
-            </>
+            components: <AdvanceSearch className='card p-3 mt-4'/>
           },
         ]
       },
     ],
   },
   {
-    id:'history',
-    name: "history",
-    classes: "mt-4",
+    id:'ex-features',
+    name: "ex-features",
+    classes: "ex-features",
     type: 'fixed',
     rows: [
       {
@@ -102,18 +99,15 @@ const layoutPayload:layoutPayload = [
         cols:[
           {
             classes: '',
-            components: 
-            <>
-            history
-            </>
+            components: <Features/>
           },
         ]
       },
     ],
   },
   {
-    id:'spotlight',
-    name: "spotlight",
+    id:'ex-cta',
+    name: "cta",
     classes: "mt-4",
     type: 'fixed',
     rows: [
@@ -122,97 +116,14 @@ const layoutPayload:layoutPayload = [
         gridGap: 8,
         cols:[
           {
-            components: 
-            <>
-            spotlight
-            </>
-          },
-          {
-            components: 
-            <>
-            notice board
-            </>
-          },
-        ]
-      },
-    ],
-  },
-  {
-    id:'statistics',
-    name: "statistics",
-    classes: "mt-4",
-    type: 'fixed',
-    rows: [
-      {
-        gridCols: 1,
-        gridGap: 8,
-        cols:[
-          {
-            components: 
-            <>
-            statistics
-            </>
-          },
-        ]
-      },
-    ],
-  },
-  {
-    id:'speech',
-    name: "speech",
-    classes: "mt-4",
-    type: 'fixed',
-    rows: [
-      {
-        gridCols: 1,
-        gridGap: 8,
-        cols:[
-          {
-            components: 
-            <>
-            speech
-            </>
-          },
-        ]
-      },
-    ],
-  },
-  {
-    id:'gallery',
-    name: "gallery",
-    classes: "mt-4",
-    type: 'fixed',
-    rows: [
-      {
-        gridCols: 1,
-        gridGap: 8,
-        cols:[
-          {
-            components: 
-            <>
-            gallery carousel
-            </>
-          },
-        ]
-      },
-    ],
-  },
-  {
-    id:'footer',
-    name: "footer",
-    classes: "mt-4",
-    type: 'fixed',
-    rows: [
-      {
-        gridCols: 1,
-        gridGap: 8,
-        cols:[
-          {
-            components: 
-            <>
-            footer
-            </>
-          },
+            components: <CallToAction
+              title='Connect your perfect match'
+              bigText='1700'
+              subTitle='brids around you'
+              action='#'
+              btnText='Make an account'
+            />
+          }
         ]
       },
     ],

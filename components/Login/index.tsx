@@ -3,6 +3,8 @@ import React from 'react'
 const index = () => {
   return (
     <button className={`
+      btn
+      btn-primary
         bg-orange-400 
         rounded-full
         text-slate-50

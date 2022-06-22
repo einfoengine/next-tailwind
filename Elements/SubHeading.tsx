@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SubHeading = () => {
+const SubHeading = ({className, text}:{ className?:string, text:string}) => {
   return (
-    <div>SubHeading</div>
+    <h4 className={`ex-element ex-sub-heading ${className}`}>{text}</h4>
   )
 }
 

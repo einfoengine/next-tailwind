@@ -1,5 +1,22 @@
+// Variables
+$gutter: 30px;
+$section-padding: $gutter*3;
+
+
+// 
+
 #ex-section-top svg{
     width: 20px;
     display: inline;
     margin-right: 10px;
+}
+
+// Sections
+.ex-section{
+    padding-top: $section-padding;
+    padding-bottom: 120px;
+    &.no-padding{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
 }

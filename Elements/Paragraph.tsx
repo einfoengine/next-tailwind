@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Paragraph = () => {
+const Paragraph = ({children}:any) => {
   return (
-    <div>Paragraph</div>
+    <p>{children}</p>
   )
 }
 
