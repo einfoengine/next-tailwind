@@ -5,7 +5,7 @@ import ProfileBrief from "../components/ProfileBrief"
 const layoutPayload:layoutPayload = [
     {
       name: "ex-registration",
-      classes: "",
+      className: "",
       type: "fixed",
       rows: [
           {

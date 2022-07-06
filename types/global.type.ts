@@ -1,13 +1,13 @@
 export type layoutPayload = {
     id?:string,
     name: string,
-    classes: string,
+    className: string,
     type: 'fixed' | 'fluid',
     rows: {
       gridCols: number,
       gridGap: number,
       cols:{
-        classes?: string,
+        className?: string,
         span?: number,
         components: JSX.Element
       }[]

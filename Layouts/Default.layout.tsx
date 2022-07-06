@@ -41,7 +41,7 @@ const Default = ({layoutPayload}:{layoutPayload: layoutPayload}) => {
           <Section
             key={section.id}
             id={section.id != undefined ? 'ex-section-'+section.id : 'ex-section-'+section.name}
-            className={'ex-section '+section.classes}
+            className={'ex-section '+section.className!=="undefined"&&section.className}
             container={section.type}
           >
             {section.rows.map((row:any, index:number)=>{

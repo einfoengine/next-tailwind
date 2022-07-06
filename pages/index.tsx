@@ -18,7 +18,7 @@ const layoutPayload:layoutPayload = [
   {
     id:'hero',
     name: "hero",
-    classes: "no-padding",
+    className: "no-padding",
     type: 'fluid',
     rows: [
       {
@@ -44,7 +44,7 @@ const layoutPayload:layoutPayload = [
   {
     id:'advance-search',
     name: "advance-search",
-    classes: "",
+    className: "",
     type: 'fixed',
     rows: [
       {
@@ -52,7 +52,7 @@ const layoutPayload:layoutPayload = [
         gridGap: 8,
         cols:[
           {
-            classes: '',
+            className: '',
             components: <AdvanceSearch className='card p-3 mt-4'/>
           },
         ]
@@ -62,7 +62,7 @@ const layoutPayload:layoutPayload = [
   {
     id:'ex-features',
     name: "ex-features",
-    classes: "ex-features",
+    className: "ex-features",
     type: 'fixed',
     rows: [
       {
@@ -70,7 +70,7 @@ const layoutPayload:layoutPayload = [
         gridGap: 8,
         cols:[
           {
-            classes: '',
+            className: '',
             components: <Features/>
           },
         ]
@@ -80,7 +80,7 @@ const layoutPayload:layoutPayload = [
   {
     id:'ex-cta',
     name: "cta",
-    classes: "mt-4",
+    className: "mt-4",
     type: 'fixed',
     rows: [
       {
@@ -103,7 +103,7 @@ const layoutPayload:layoutPayload = [
   {
     id:'ex-cta',
     name: "cta",
-    classes: "mt-4",
+    className: "mt-4",
     type: 'fixed',
     rows: [
       {

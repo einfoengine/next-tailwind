@@ -24,8 +24,8 @@ const Banner = ({
   return (
     <div className={`ex-element ex-banner ${className}`} style={{backgroundImage: `url(${background.default.src})`}}>
       <div className={childWrapClass} style={{backgroundColor: colorOverly}}>
-        <h3 className='ex-jumbotron-titlee'>{title}</h3>
-        <h4 className='ex-jumbotron-sub-titlee'>{subTitle}</h4>
+        <h3 className='ex-jumbotron-title'>{title}</h3>
+        <h4 className='ex-jumbotron-sub-title'>{subTitle}</h4>
         <p className='ex-jumbotron-paragraph'>{text}</p>
         <a className='ex-jumbotron-button btn btn-primary' href={link}>Details</a>
       </div>
