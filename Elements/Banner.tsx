@@ -3,30 +3,32 @@ import Image from 'next/image'
 
 const Banner = ({
     className,
+    childWrapClass,
     title,
     subTitle,
     text,
     link,
     backgroundImage,
-    backgroundColor,
-    backgroundOverlay
+    colorOverly,
 }:{
     className: string
+    childWrapClass: string,
     title: string,
     subTitle: string,
     text: string,
     link: string,
     backgroundImage: string,
-    backgroundColor: string,
-    backgroundOverlay: string
+    colorOverly: string,
 }) => {
   let background = require(`../public/images/${backgroundImage}`)
   return (
-    <div className={`ex-element ex-banner ${className}`} style={{backgroundColor: backgroundColor,  backgroundImage: `url(${background.default.src})`}}>        
-        <h3>{title}</h3>
-        <h4>{subTitle}</h4>
-        <p>{text}</p>
-        <a className='btn btn-primary' href={link}>Details</a>
+    <div className={`ex-element ex-banner ${className}`} style={{backgroundImage: `url(${background.default.src})`}}>
+      <div className={childWrapClass} style={{backgroundColor: colorOverly}}>
+        <h3 className='ex-jumbotron-titlee'>{title}</h3>
+        <h4 className='ex-jumbotron-sub-titlee'>{subTitle}</h4>
+        <p className='ex-jumbotron-paragraph'>{text}</p>
+        <a className='ex-jumbotron-button btn btn-primary' href={link}>Details</a>
+      </div>
     </div>
   )
 }

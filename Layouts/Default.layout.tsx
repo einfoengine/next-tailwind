@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+// import scriptT
 import Section from '../Elements/Section'
 import Row from '../Elements/Row'
 import Col from '../Elements/Column'
@@ -9,10 +10,32 @@ import Logo from '../Elements/Logo'
 import Paragraph from '../Elements/Paragraph'
 import ModuleTitle from '../Elements/ModuleTitle'
 
+import MainNav from '../components/MainNav'
+import Login from '../components/Login'
+
+// import bootstrapJs from '../node_modules/bootstrap/dist/js/bootstrap.min'
+
 
 const Default = ({layoutPayload}:{layoutPayload: layoutPayload}) => {
+  // const script = document.createElement('script');
+  // useEffect(()=>{
+  //   script.src = bootstrapJs
+  // },[])
   return (
     <>
+      <Section id='ex-top' className='ex-top no-padding' container='fixed'>
+        <Row id='ex-row ex-row-top'>
+          <Col className='col-2'>
+            <h1>Pakhi Bhai</h1>
+          </Col>
+          <Col className='col-9'>
+            <MainNav />
+          </Col>
+          <Col className='col-1'>
+            <Login />
+          </Col>
+        </Row>
+      </Section>
       {
         layoutPayload.map((section:any, index: number)=>
           <Section
@@ -29,10 +52,10 @@ const Default = ({layoutPayload}:{layoutPayload: layoutPayload}) => {
               className={`ex-row-${index}`}>
                 {
                   row.cols.map((col:any, index:number)=>
-                    <Col 
-                      key={`${section.name}-${row.id}-'col-'${index}`} 
-                      className={`ex-col ${rowNumber+'-col-'+index} col-${col.span}`}
-                    >
+                  <Col 
+                  key={`${section.name}-${row.id}-'col-'${index}`} 
+                  className={`ex-col ${rowNumber+'-col-'+index} col-${col.span}`}
+                  >
                       {col.components}
                     </Col>
                   )
