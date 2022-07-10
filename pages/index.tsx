@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Default from '../layouts/Default.layout'
+import Link from 'next/link'
 import ImageBox from '../Elements/ImageBox'
 import BrandDetails from '../components/BrandDetails'
 import Login from '../components/Login'
@@ -53,7 +54,7 @@ const layoutPayload:layoutPayload = [
         cols:[
           {
             className: '',
-            components: <AdvanceSearch className='card p-3 mt-4'/>
+            components: <AdvanceSearch className='rounded p-3 mt-4 ex-bg-gray ex-text-white'/>
           },
         ]
       },
@@ -71,7 +72,9 @@ const layoutPayload:layoutPayload = [
         cols:[
           {
             className: '',
-            components: <Features/>
+            components: <Features
+              title='Get started'
+            />
           },
         ]
       },
@@ -89,6 +92,7 @@ const layoutPayload:layoutPayload = [
         cols:[
           {
             components: <CallToAction
+              className="text-center ex-bg-primary-gradiant ex-text-white p-4"
               title='Connect your perfect match'
               bigText='1700'
               subTitle='brids around you'

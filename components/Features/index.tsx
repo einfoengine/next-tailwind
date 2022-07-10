@@ -1,9 +1,16 @@
 import React from 'react'
 import ImageBox from "../../Elements/ImageBox"
 
-const Features = ({className}:{className?:string}) => {
+const Features = ({
+    className,
+    title
+}:{
+    title?:string,
+    className?:string
+}) => {
   return (
-    <div className={`ex-component ex-features ${className}`}>
+    <div className={`ex-component ex-features text-center ${className}`}>
+        {title!=='undefined'&&<h2 className='ex-component-title'>{title}</h2>}
         <div className="row">
             <div className="col col-4 ex-feature">
                 <ImageBox 

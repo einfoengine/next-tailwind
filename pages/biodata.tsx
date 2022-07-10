@@ -1,5 +1,5 @@
 import type { layoutPayload } from "../types/global.type"
-import RegistrationForm from "../components/Registration"
+import BiodataForm from "../components/Biodata"
 import Default from "../layouts/Default.layout"
 import ProfileBrief from "../components/ProfileBrief"
 const layoutPayload:layoutPayload = [
@@ -18,14 +18,14 @@ const layoutPayload:layoutPayload = [
                   },
                   {
                     span: 8,
-                    components: <RegistrationForm/>
+                    components: <BiodataForm/>
                   }
               ]
           }
       ]
     }
   ]
-const Registration = () => {
+const Biodata = () => {
   return (
     <div className="ex-page ex-page-registration">
         <Default layoutPayload = {layoutPayload}/> 
@@ -33,4 +33,4 @@ const Registration = () => {
   )
 }
 
-export default Registration
+export default Biodata

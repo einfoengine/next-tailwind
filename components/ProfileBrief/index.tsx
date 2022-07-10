@@ -1,12 +1,12 @@
 import React from 'react'
+import Image from 'next/image'
 
 const ProfileBrief = () => {
   return (
-    <div className='ex-component'>
-        <figure className="figure card p-3">
-            <img src="/images/profiles/user-1.jpg"/>
-            {/* <img src="../../public/images/profiles/user-1.jpg" className="figure-img img-fluid rounded" alt="..."/> */}
-            <h4>Shanewaz Al Maruf</h4>
+    <div className='ex-component border rounded'>
+        <figure className="p-3">
+          <Image src="/images/profiles/user-1.jpg" layout='responsive' width={50} height={50}/>
+            <h4>Name of the user</h4>
             <span>User ID - D220626001</span>
             <hr />
             <div className="">

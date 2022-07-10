@@ -24,7 +24,7 @@ const Default = ({layoutPayload}:{layoutPayload: layoutPayload}) => {
   return (
     <>
       <Section id='ex-top' className='ex-top no-padding' container='fixed'>
-        <Row id='ex-row ex-row-top'>
+        <Row id='ex-row-top' className='align-items-center'>
           <Col className='col-2'>
             <h1>Pakhi Bhai</h1>
           </Col>
