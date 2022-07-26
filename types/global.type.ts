@@ -4,8 +4,6 @@ export type layoutPayload = {
     className: string,
     type: 'fixed' | 'fluid',
     rows: {
-      gridCols: number,
-      gridGap: number,
       cols:{
         className?: string,
         span?: number,

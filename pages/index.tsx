@@ -23,8 +23,6 @@ const layoutPayload:layoutPayload = [
     type: 'fluid',
     rows: [
       {
-        gridCols: 1,
-        gridGap: 8,
         cols:[
           {
             components: <Banner 
@@ -49,8 +47,6 @@ const layoutPayload:layoutPayload = [
     type: 'fixed',
     rows: [
       {
-        gridCols: 1,
-        gridGap: 8,
         cols:[
           {
             className: '',
@@ -67,8 +63,6 @@ const layoutPayload:layoutPayload = [
     type: 'fixed',
     rows: [
       {
-        gridCols: 1,
-        gridGap: 8,
         cols:[
           {
             className: '',
@@ -87,8 +81,6 @@ const layoutPayload:layoutPayload = [
     type: 'fixed',
     rows: [
       {
-        gridCols: 2,
-        gridGap: 8,
         cols:[
           {
             components: <CallToAction
@@ -111,8 +103,6 @@ const layoutPayload:layoutPayload = [
     type: 'fixed',
     rows: [
       {
-        gridCols: 2,
-        gridGap: 8,
         cols:[
           {
             components: <Videos/>
