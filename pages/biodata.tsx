@@ -1,6 +1,6 @@
 import type { layoutPayload } from "../types/global.type"
 import BiodataForm from "../components/Biodata"
-import Default from "../layouts/Default.layout"
+import Default from "../Layouts/Default.layout"
 import ProfileBrief from "../components/ProfileBrief"
 const layoutPayload:layoutPayload = [
     {
@@ -9,8 +9,6 @@ const layoutPayload:layoutPayload = [
       type: "fixed",
       rows: [
           {
-              gridCols: 12,
-              gridGap: 4,
               cols: [
                   {
                     span: 4,
