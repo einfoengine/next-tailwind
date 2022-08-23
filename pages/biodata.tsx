@@ -4,6 +4,7 @@ import Default from "../Layouts/Default.layout"
 import ProfileBrief from "../components/ProfileBrief"
 const layoutPayload:layoutPayload = [
     {
+      id:"ex-registration",
       name: "ex-registration",
       className: "",
       type: "fixed",

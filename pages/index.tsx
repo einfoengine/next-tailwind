@@ -26,8 +26,8 @@ const layoutPayload:layoutPayload = [
         cols:[
           {
             components: <Banner 
-              className='ex-hero text-center'
-              childWrapClass='ex-jumbotron ' 
+              className='ex-hero'
+              childWrapClass='ex-jumbotron text-center' 
               title='We help to find your better half' 
               subTitle='Demo sub title'
               text='Demo text'

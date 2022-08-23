@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import Modal from '../Elements/Modal'
+import Registration from '../components/Registration'
 
 const Banner = ({
     className,
@@ -26,9 +28,14 @@ const Banner = ({
       <div className={childWrapClass} style={{backgroundColor: colorOverly}}>
         <h3 className='ex-jumbotron-title ex-text-white'>{title}</h3>
         <h4 className='ex-jumbotron-sub-title ex-text-dal-white'>{subTitle}</h4>
-        <p className='ex-jumbotron-paragraph ex-text-dal-white'>{text}</p>
-        <a className='ex-jumbotron-button btn btn-primary' href={link}>Register</a>
+        <p className='ex-jumbotron-paragraph ex-text-dal-white'>{text}</p>        
+        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registrationModal">
+          Register
+        </button>
       </div>
+        <Modal modalId="registrationModal" modalTitle='Registation form' modalSubmitText="Register">
+          <Registration/>
+        </Modal>
     </div>
   )
 }
