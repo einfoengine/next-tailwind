@@ -4,10 +4,12 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
   name:  String,
   phoneNumber: String,
-  emailAddress:   String,
+  emailAddress: String,
   password:   String,
   gender: String,
   religion: String
 }, {timestamps: true});
 
-export default mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
+
+export default User;

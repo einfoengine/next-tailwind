@@ -5,6 +5,7 @@ import connectDB from "./db.js";
 
 import biodata from './routs/api/biodata.js';
 import users from './routs/api/users.js';
+// import User from ''
 
 dotenv.config(); // Function invocation
 import cors from 'cors'
