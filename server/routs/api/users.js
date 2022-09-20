@@ -1,9 +1,12 @@
 import express from "express";
 const router = express.Router();
 
+// Models
 import User from '../../models/User.js';
-// import User from './maruf.js';
 
+// Conntrollers
+
+// Requests
 router.get('/registration', (req, res)=>{
     
     res.send("Registraion responded!")
